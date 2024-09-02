@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema de Terror</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">
+        <h1>Cinema de Terror</h1>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/ingressos.html">Ingressos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="carousel">
+    <div class="carousel-container">
+        <div class="slide active" style="background-image: url('images/filme1.jpg');">
+            <div class="slide-content">
+                <h2>Alien - O Oitavo Passageiro</h2>
+                <p>A tripulação de uma nave espacial intercepta um sinal desconhecido e acaba confrontando uma ameaça mortal que coloca em risco a vida de todos a bordo</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('images/filme2.jpg');">
+            <div class="slide-content">
+                <h2>Eles Vivem</h2>
+                <p>Um homem comum faz uma descoberta perturbadora ao encontrar um par de óculos que revela uma realidade oculta, onde forças invisíveis controlam a sociedade.</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('images/filme3.jpg');">
+            <div class="slide-content">
+                <h2>A Morte do Demônio</h2>
+                <p>Um grupo de amigos viaja para uma cabana remota, onde acidentalmente desperta forças malignas ao explorar um misterioso livro antigo.</p>
+            </div>
+        </div>
+    </div>
+    <div class="controls">
+        <button id="prev" class="control">&lt;</button>
+        <button id="next" class="control">&gt;</button>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.getElementById('next');
+        const prevBtn = document.getElementById('prev');
+        let currentSlide = 0;
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+            document.querySelector('.carousel-container').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlides();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlides();
+        });
+
+        updateSlides(); // Initial update
+    });
+</script>
+</body>
+<footer class="footer">
+    <p>&copy; 2024 Cinema de Terror. All Rights Reserved.</p>
+</footer>
+</html>
