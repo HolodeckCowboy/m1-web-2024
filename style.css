@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    padding: 10px;
+    background-color: #f00;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#carousel-filmes {
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.carousel-item {
+    margin-right: 20px;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 200px;
+    height: 300px;
+}
+
+.info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.info-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#mapa-assentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.secao {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.secao-horizontal {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.assento {
+    width: 40px;
+    height: 40px;
+    background-color: #5a5a5a;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.assento.ocupado {
+    background-color: red;
+}
+
+.assento.selecionado {
+    background-color: #ff5722;
+}
+
+.assento:hover {
+    background-color: #ff5722;
+}
+
+.tela {
+    margin-top: 20px;
+    width: 300px;
+    text-align: center;
+    background-color: #444;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+#aperitivos {
+    padding: 20px;
+}
+
+#aperitivos .item {
+    margin-bottom: 20px;
+}
+
+#pagamento {
+    padding: 20px;
+}
+
+.tipo-cartao {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-pagamento {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-pagamento label {
+    margin-top: 10px;
+}
+
+.form-pagamento input[type="text"] {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#revisao p {
+    margin-bottom: 10px;
+}
+
+#poster-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#poster-filme {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f00;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px;
+}

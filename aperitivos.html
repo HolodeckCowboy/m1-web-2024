@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema de Terror - Seleção de Aperitivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Cinema de Terror</h1>
+</header>
+
+<main>
+    <section class="container">
+        <div id="aperitivos">
+            <h2>Escolha seus Aperitivos</h2>
+            <div class="item">
+                <h3>Bebidas</h3>
+                <label><input type="checkbox" id="refrigerante"> Refrigerante</label><br>
+                <label><input type="checkbox" id="agua"> Água</label><br>
+                <label><input type="checkbox" id="suco"> Suco</label>
+            </div>
+
+            <div class="item">
+                <h3>Doces</h3>
+                <label><input type="checkbox" id="pipoca-doce"> Pipoca Doce</label><br>
+                <label><input type="checkbox" id="chocolate"> Chocolate</label><br>
+                <label><input type="checkbox" id="bala-de-goma"> Bala de Goma</label>
+            </div>
+
+            <div class="item">
+                <h3>Combos</h3>
+                <label><input type="checkbox" id="combo1"> Combo 1 - Pipoca Grande + Refrigerante</label><br>
+                <label><input type="checkbox" id="combo2"> Combo 2 - Pipoca Média + Suco</label>
+            </div>
+
+            <button onclick="irParaPagamento()">Ir para Pagamento</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Cinema de Terror</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

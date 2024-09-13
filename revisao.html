@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema de Terror - Revisão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregarRevisao()">
+<header>
+  <h1>Cinema de Terror</h1>
+</header>
+
+<main>
+  <section class="container">
+    <div id="revisao">
+      <h2>Revisão do Pedido</h2>
+
+      <div id="poster-container">
+        <img id="poster-filme" src="" alt="Pôster do filme" style="width: 200px; height: 300px;">
+      </div>
+
+      <p><strong>Filme:</strong> <span id="filme-selecionado"></span></p>
+      <p><strong>Assento(s):</strong> <span id="assento-selecionado"></span></p>
+      <p><strong>Aperitivos:</strong> <span id="aperitivos-selecionados"></span></p>
+      <p><strong>Método de Pagamento:</strong> <span id="pagamento-selecionado"></span></p>
+
+      <button onclick="confirmarCompra()">Confirmar Compra</button>
+      <button onclick="cancelarCompra()">Cancelar</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 Cinema de Terror</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
